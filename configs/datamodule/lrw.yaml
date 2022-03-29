@@ -1,0 +1,11 @@
+_target_: src.datamodules.lrw_datamodule.LRWDataModule
+
+# -- default parameter
+data_dir: ${data_dir}lrw_visual_cropped # data_dir is specified in config.yaml
+label_file: ${data_dir}lrw_labels.txt
+#visual: True
+#noise_data: None
+#annotation_path: None
+batch_size: 16
+num_workers: 4
+pin_memory: False

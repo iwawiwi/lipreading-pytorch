@@ -1,0 +1,18 @@
+_target_: src.models.lrw_module.LRWLitModule
+
+# -- using default parameter
+net:
+  _target_: src.models.components.lrw_net.LRWTCNet
+  visual: True
+  backbone: "resnet"
+  hidden_size: 256
+  num_classes: 500
+  relu_type: "prelu"
+  tcn_options:
+    num_layers: 4
+    kernel_size: 3
+    dropout: 0.2
+    dwpw: False
+    width_mult: 1.0
+  width_mult: 1.0
+  extract_feats: False
